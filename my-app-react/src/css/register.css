@@ -5,13 +5,10 @@
     margin-right: 400px;
     margin-top: 50px;
     text-align: center;
-  
 }
-
   input[type=text] {
     width: 70%;
      padding: 10px 10px;
-    
      box-sizing: border-box;
      border: 2px solid whitesmoke;
      border-radius: 4px;
@@ -32,7 +29,7 @@
   }
   input[type=email] {
     width: 70%;  
-    color : white; 
+    color: black;
     padding: 10px 10px;
     border: 2px solid whitesmoke;
     border-radius: 4px;
@@ -41,7 +38,7 @@
   .button{
     background-color: #4CAF50; /* Green */
   border: none;
-  color: white;
+
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
