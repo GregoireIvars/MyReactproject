@@ -5,44 +5,29 @@ import React, { useState } from 'react';
 
 function App() {
   const [personnages, setPersonnages] = useState([]);
-
-  async function requesteHandle() {
-    const requestOptions = {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    };
-    const url = ('https://swapi.dev/api/people')
-    fetch(url, requestOptions).then(response => {
-      if (!response.ok) {
-        throw Error(response.statusText)
-      }
-      return response.json();
-    }).then(response => {
-      console.log(response);
-      return response.json();
-    }).then(data => this.setPersonnages({
-      name: data.name,
-      height: data.height,
-      gender: data.gender,
-    }).then(listPersonnage => data.results.map((personnageData)=>{
+  async function fetchPersonnagesHandler() {
+    const response = await fetch('https://swapi.dev/api/people');
+    const data = await response.json();
+    const listPersonnages = data.results.map((personnageData) => {
       return {
-        name : personnageData.name,
-        height : personnageData.height,
-        gender : personnageData.gender,
-      }
-    })
-    ));
-  
-
+        name: personnageData.name,
+        gender: personnageData.gender,
+        height: personnageData.height,
+      };
+    });
+    setPersonnages(listPersonnages);
   }
-
-
-
   return (
+    <React.Fragment>
     <div className="App">
       <h2>Obtenir tout les personnages de Star Wars</h2>
-      <button onClick={requesteHandle}>requeste</button>
+      <button onClick={fetchPersonnagesHandler}>requeste</button>
     </div>
+    <section>
+        {personnages.length > 0 && <PersonnageList personnages={personnages} />}
+        {personnages.length === 0 && <p>Found no movies.</p>}
+      </section>
+    </React.Fragment>
   );
 }
 
