@@ -4,6 +4,7 @@ import './css/App.css';
 // import Buttontrain from './composant/Buttontrain';
 // import Register from './composant/register'
 import Login from './composant/login';
+import Header from './composant/header';
 function App() {
 
   // const expenses = [
@@ -29,11 +30,17 @@ function App() {
   // ];
 
   return (
+    <>
+    <div>
+          <Header />
+    </div>
     <div className='App'>
-      <h2>Lets go !</h2>
       {/* <Expenses items={expenses} /> */}
+  
+      <h2>Lets go !</h2>
       <Login />
     </div>
+    </>
   );
 }
 
