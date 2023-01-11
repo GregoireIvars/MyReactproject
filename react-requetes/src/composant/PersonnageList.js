@@ -5,9 +5,8 @@ const PersonnageList = (props) => {
         <ul>
             {props.personnages.map((personnage) => (
                 <Personnage
+                    key={personnage.id}
                     name={personnage.name}
-                    gender={personnage.gender}
-                    height={personnage.height}
                 />
             ))}
 

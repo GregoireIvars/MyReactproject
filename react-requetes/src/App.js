@@ -1,22 +1,18 @@
 
 import './App.css';
 import PersonnageList from './composant/PersonnageList';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import {Create, findAll } from './services/Personnage.service';
 
 function App() {
   const [personnages, setPersonnages] = useState([]);
   async function fetchPersonnagesHandler() {
-    const response = await fetch('https://swapi.dev/api/people');
-    const data = await response.json();
-    const listPersonnages = data.results.map((personnageData) => {
-      return {
-        name: personnageData.name,
-        gender: personnageData.gender,
-        height: personnageData.height,
-      };
-    });
+    const listPersonnages = await findAll()
     setPersonnages(listPersonnages);
   }
+  useEffect(()=> {
+    fetchPersonnagesHandler()
+  }, [])
   return (
     <React.Fragment>
     <div className="App">
