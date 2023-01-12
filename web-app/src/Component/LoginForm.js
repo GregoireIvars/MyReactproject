@@ -12,7 +12,7 @@ function LoginForm(props) {
         <form className='form'>
           <label >Name</label>
           <br></br>
-          <input type="text" id="username" name="username" value=" " placeholder="Your name.."
+          <input type="text" id="username" name="username" placeholder="Your name.."
             required></input>
           <br></br>
           <label >Email</label>
@@ -33,16 +33,7 @@ function LoginForm(props) {
           <button id="submit" >Submit</button>
         </form>
       </div>
-      <LoginInput className='expense-item'>
-        <div className='expense-item__description'>
-          <label className='label'>Name : </label>
-          <h2>{props.name}</h2>
-          <label className='label'>Mail : </label>
-          <h2>{props.email}</h2>
-          <label className='label'>Age : </label>
-          <div className='expense-item__price'>{props.age}</div>
-        </div>
-      </LoginInput>
+      
     </>
   );
 }
