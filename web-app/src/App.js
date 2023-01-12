@@ -1,11 +1,14 @@
 
-import Login from './Component/Login';
 import './App.css';
 
+import LoginInput from './Component/LoginInput';
+
 function App() {
- 
+
   return (
-  <Login />
+    <>
+      <LoginInput />
+    </>
   );
 }
 

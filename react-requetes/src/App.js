@@ -2,12 +2,12 @@
 import './App.css';
 import PersonnageList from './composant/PersonnageList';
 import React, { useState, useEffect} from 'react';
-import {Create, findAll } from './services/Personnage.service';
+import {Create, findAll, Show } from './services/Personnage.service';
 
 function App() {
   const [personnages, setPersonnages] = useState([]);
   async function fetchPersonnagesHandler() {
-    const listPersonnages = await findAll()
+    const listPersonnages = await Show()
     setPersonnages(listPersonnages);
   }
   useEffect(()=> {
