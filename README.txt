@@ -2,8 +2,7 @@ Pour mieux si retrouver dans mon Repo je fais une description de mes dossier qu'
 
 Charka est un projet où je fais quelque test pour voir comment fonctionne la librairie 
 
-my-app-react est le projet à rendre pour jeudi où l'on doit reprendre et montré que on à bien
-compris les fonctionnalité  de React vue en cours .
+
 
 My-tp est la réponse au tp demander Lundi voir plus précisément exo.js (fichier comportant mes réponse)
 
