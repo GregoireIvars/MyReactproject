@@ -5,7 +5,6 @@ import { UserContext } from './LoginForm';
 
 
 export default function Profils() {
-    const { user } = useContext(UserContext);
 
     return (
         <div id="profil">
@@ -14,8 +13,8 @@ export default function Profils() {
                 <h1>Your Profile</h1>
                 <div>
                     <h1>Tableau de bord</h1>
-                    <p>Bienvenue, {user.username}!</p>
-                    <p>Votre adresse e-mail est {user.email}.</p>
+                    <p>Bienvenue, {}!</p>
+                    <p>Votre adresse e-mail est {}.</p>
                 </div>
                 <button>Edit Profil</button>
             </div>
