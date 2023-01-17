@@ -13,7 +13,7 @@ import Profils from "./Component/profil";
 import { Red } from "./Component/red";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "home",
     element: <Root />,
     errorElement: <ErrorPage />,
   },
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
 
   },
   {
-    path: "login",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
   },

@@ -20,8 +20,6 @@ function RequestPersonnage() {
     }
     useEffect(() => {
         fetchPersonnagesShowHandler()
-        fetchPersonnagesCreateHandler()
-        fetchPersonnagesFindAllHandler()
     }, [])
   
     return (

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import '../Css/App.css';
 
 function LoginForm() {
@@ -8,8 +10,13 @@ function LoginForm() {
     const [passwordIsValid, setPasswordIsValid] = useState(false)
     const [nameIsTouched, setNameIsTouched] = useState(false)
     const [passwordIsTouched, setPasswordIsTouched] = useState(false)
-
+    let navigate = useNavigate();
+  
+    
+    
+    
     useEffect(()  => {
+        
         if (nameIsValid && passwordIsValid) {
             console.log('Form is Valid')
         }
@@ -55,6 +62,8 @@ function LoginForm() {
         setNameIsValid(true);
         setPasswordState('');
         setNameState('');
+        
+        navigate('/home')
     }
    
     const formInputIsinvalid = !nameIsValid && !passwordIsValid && nameIsTouched && passwordIsTouched;
